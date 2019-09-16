@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:showIn="@layout/instruction_view_layout">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/instructionManeuverLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/instruction_background"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingTop="15dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--导航转向图标-->
+        <com.mapbox.services.android.navigation.ui.v5.instruction.maneuver.ManeuverView
+            android:id="@+id/maneuverView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:maneuverViewPrimaryColor="?attr/navigationViewBannerManeuverPrimary"
+            app:maneuverViewSecondaryColor="?attr/navigationViewBannerManeuverSecondary" />
+
+        <!--距离下一个步骤距离-->
+        <!--android:textColor="?attr/navigationViewBannerSecondaryText"-->
+        <TextView
+            android:id="@+id/stepDistanceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textColor="@color/day_route_txt_color"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/maneuverView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="3.2 mi" />
+
+        <LinearLayout
+            android:id="@+id/instructionLayoutText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toLeftOf="@id/stepDistanceText"
+            app:layout_constraintTop_toBottomOf="@id/stepDistanceText">
+
+            <TextView
+                android:id="@+id/stepPrimaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/day_route_txt_color"
+                android:textSize="18sp"
+                tools:text="Fulton St." />
+
+            <TextView
+                android:id="@+id/stepSecondaryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/day_route_txt_color"
+                android:textSize="16sp"
+                tools:text="San Jose / Cupertino / Saratoga Montery / SR-1" />
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <include
+        android:id="@+id/turnLaneLayout"
+        layout="@layout/turn_lane_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/instructionManeuverLayout"
+        app:layout_constraintEnd_toStartOf="@+id/soundLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/instructionManeuverLayout" />
+
+    <include
+        android:id="@+id/subStepLayout"
+        layout="@layout/sub_instruction_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/instructionManeuverLayout"
+        app:layout_constraintEnd_toStartOf="@+id/soundLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/instructionManeuverLayout" />
+
+    <include
+        android:id="@+id/instructionListLayout"
+        layout="@layout/instruction_list_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionManeuverLayout" />
+
+    <!--控制语音是否打开-->
+    <com.mapbox.services.android.navigation.ui.v5.SoundButton
+        android:id="@+id/soundLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--路线重新规划-->
+    <LinearLayout
+        android:id="@+id/rerouteLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/navigationViewBannerBackground"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/soundLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="@string/rerouting"
+            android:textColor="?attr/navigationViewBannerPrimaryText"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

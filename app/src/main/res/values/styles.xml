@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--主题风格-->
+    <style name="MainTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:screenOrientation">landscape</item>
+        <item name="android:keepScreenOn">true</item>
+    </style>
+
+    <!--启动页样式-->
+    <style name="Bg_Launcher" parent="MainTheme">
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <!--开始行程进度条-->
+    <style name="StyleProgressBarMini" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/shape_loading</item>
+    </style>
+</resources>

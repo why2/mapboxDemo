@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!--低电量-->
+    <color name="battery_low_color">#FFFF1F1F</color>
+    <!--正常电量颜色-->
+    <color name="battery_normal_color">#FF1FFF9A</color>
+    <!--87%白色-->
+    <color name="unify_white_color87">#DEFFFFFF</color>
+    <color name="bg_color_shift">#202022</color>
+    <!--地图路线规划颜色-->
+    <color name="route_poly_color">#FF9A98A8</color>
+    <color name="gray_333333">#333333</color>
+</resources>

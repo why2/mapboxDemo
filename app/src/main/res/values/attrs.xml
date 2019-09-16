@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--电池1-->
+    <declare-styleable name="Battery">
+        <attr name="mwhWaveHeight" format="dimension" />
+        <attr name="mwhStartColor" format="color" />
+        <attr name="mwhCloseColor" format="color" />
+        <attr name="mwhIsRunning" format="boolean" />
+        <attr name="mwhEnableFullScreen" format="boolean" />
+        <attr name="mwhColorAlpha" format="fraction|float" />
+        <!--波浪高度-->
+        <attr name="mwhProgress" format="fraction|float" />
+        <!--波浪速度-->
+        <attr name="mwhVelocity" format="fraction|float" />
+        <attr name="mwhGradientAngle" format="integer" />
+        <attr name="mwhCornerRadius" format="dimension" />
+        <attr name="mwhWaves" />
+        <!--边长-->
+        <attr name="mwhSideLength" format="dimension" />
+        <!--边宽-->
+        <attr name="mwhSideWidth" format="dimension" />
+        <!--正常电量颜色-->
+        <attr name="mwhNormalColor" format="color" />
+        <!--警示电量颜色-->
+        <attr name="mwhWarningColor" format="color" />
+    </declare-styleable>
+
+    <!--电池2-->
+    <declare-styleable name="Battery2">
+        <!--正常电量颜色-->
+        <attr name="by2NormalColor" format="color" />
+        <!--警示电量颜色-->
+        <attr name="by2WarningColor" format="color" />
+    </declare-styleable>
+</resources>

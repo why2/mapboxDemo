@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ScooterNavigation</string>
+    <string name="order_title">Order Message</string>
+    <string name="p">P</string>
+    <string name="km">KM</string>
+    <string name="km_h">km/h</string>
+    <string name="d">D</string>
+    <string name="the_topbox_is_opened">The topbox is opened.</string>
+    <string name="the_topbox_is_closed">The topbox is closed</string>
+
+    <!--弹窗标题-->
+    <string name="title_topbox">Topbox</string>
+    <string name="title_navigation">Navigation details</string>
+    <string name="scooter_navigation">The navigation information is being synced to the scooter.</string>
+    <string name="loading">loading…</string>
+</resources>

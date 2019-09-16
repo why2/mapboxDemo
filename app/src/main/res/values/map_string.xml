@@ -1,0 +1,7 @@
+<resources>
+    <!--地图token-->
+    <string name="access_token" translatable="false">pk.eyJ1IjoiYmlsbGJpYW4iLCJhIjoiY2p5czRsNGVjMGdsMzNvbnUyNG12ZDBqaCJ9.XkzscyLTU0L3hNmnx8BDlw</string>
+    <!--地图样式-->
+    <string name="map_style" translatable="false">mapbox://styles/billbian/cjzjhz0nb16nm1crws18blloa/draft</string>
+    <string name="current_night_mode" translatable="false">current_night_mode</string>
+</resources>
